@@ -1,0 +1,5 @@
+export const COLOR = {
+    PRIMARYCOLOR:"#0C1921",
+    TEXRCOLOR:"#55698C",
+    BGCOLOR:"#8FA4DB"
+}
