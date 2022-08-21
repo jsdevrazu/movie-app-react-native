@@ -13,7 +13,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <TailwindProvider>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Welcome">
           <Stack.Screen
             name="Login"
             component={Login}

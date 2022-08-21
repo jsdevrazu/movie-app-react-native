@@ -1,10 +1,16 @@
-import { View, Text, Image, FlatList, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import SafeAreaWrapper from "../../Components/SafeAreaWrapper/SafeAreaWrapper";
 import {
   ArrowCircleDownIcon,
   CheckCircleIcon,
-  MenuIcon,
 } from "react-native-heroicons/solid";
 import { COLOR } from "../../constants/color";
 import axios from "axios";
@@ -40,15 +46,17 @@ const Welcome = () => {
             Movie on cinemas <ArrowCircleDownIcon color="#fff" size={10} />
           </Text>
         </View>
-        <View className="flex-row gap-2 items-center">
+        <TouchableOpacity
+          className="flex-row gap-2 items-center"
+          onPress={() => navigation.navigate("Account")}
+        >
           <Image
             source={{
               uri: "https://cdn.pixabay.com/user/2022/04/16/03-29-22-662_48x48.jpg",
             }}
             className="w-10 h-10 object-cover rounded-full"
           />
-          <MenuIcon size={20} color="#fff" />
-        </View>
+        </TouchableOpacity>
       </View>
       {/* Hero */}
       <View className="flex-1 justify-center items-center">
