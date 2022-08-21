@@ -1,9 +1,18 @@
+import { useNavigation } from "@react-navigation/native";
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import { CameraIcon } from "react-native-heroicons/solid";
+import { ArrowLeftIcon, CameraIcon } from "react-native-heroicons/solid";
 
 const Account = () => {
+  const navigate = useNavigation();
+
   return (
     <View className="bg-[#ecf0fc] flex-1 justify-center items-center">
+      <TouchableOpacity
+        onPress={() => navigate.goBack()}
+        className="w-8 h-8 bg-gray-900 justify-center items-center rounded-full absolute top-14 left-6"
+      >
+        <ArrowLeftIcon size={25} color="white" />
+      </TouchableOpacity>
       <View className="shadow-md justify-center items-center rounded-md bg-white p-4">
         <Text className="mb-4 font-semibold text-xl">Account Information</Text>
         <View className="relative border-4 border-indigo-400 rounded-full p-1">
