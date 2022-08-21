@@ -17,7 +17,7 @@ const Signup = () => {
     <View className={`bg-gray-900 flex-1 justify-center items-center`}>
       <View className="shadow-md bg-white w-full p-8 rounded-md">
         <Text className="text-1xl font-bold text-center">
-          Welcome to login page
+          Welcome to register page
         </Text>
         <AppForm
           initialValues={{ name: "", email: "", password: "" }}
