@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Welcome from "./app/Screen/Welcome/Welcome";
 import MovieDetails from "./app/Screen/MovieDetails/MovieDetails";
 import Account from "./app/Screen/Account/Account";
+import Login from "./app/Screen/Login/Login";
+import Signup from "./app/Screen/Signup/Signup";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +14,20 @@ const App = () => {
     <NavigationContainer>
       <TailwindProvider>
         <Stack.Navigator>
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Signup"
+            component={Signup}
+            options={{
+              headerShown: false,
+            }}
+          />
           <Stack.Screen
             name="Welcome"
             component={Welcome}

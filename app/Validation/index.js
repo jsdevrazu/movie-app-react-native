@@ -16,7 +16,7 @@ export const LoginSchema = Yup.object().shape({
 export const RegisterSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, ({ min }) => `Name must be at least ${min} characters`)
-    .required("Name Address is Required"),
+    .required("Name is Required"),
   email: Yup.string()
     .email("Please enter valid email")
     .required("Email Address is Required"),

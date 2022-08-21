@@ -1,12 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import { View, Text } from "react-native";
-import AppForm from "../../components/Form/AppForm";
-import AppFormFeilds from "../../components/Form/AppFormFeilds";
-import AppSubmitButton from "../../components/Form/AppSubmitButton";
+import AppForm from "../../Components/Form/AppForm/AppForm";
+import AppFormFeilds from "../../Components/Form/AppFormFeilds/AppFormFeilds";
+import AppSubmitButton from "../../Components/Form/AppSubmitButton/AppSubmitButton";
 import { LoginSchema } from "../../Validation";
-import SafeAreaWrapper from "../../Components/SafeAreaWrapper/SafeAreaWrapper";
-import { COLOR } from "../../constants/color";
-
 
 const Login = () => {
   const navigation = useNavigation();
@@ -16,13 +13,8 @@ const Login = () => {
   };
 
   return (
-    <SafeAreaWrapper
-      contentContainerStyle={{
-        paddingBottom: 100,
-        backgroundColor: COLOR.PRIMARYCOLOR,
-      }}
-    >
-      <View className="shadow-md bg-white w-full p-8">
+    <View className={`bg-gray-900 flex-1 justify-center items-center`}>
+      <View className="shadow-md bg-white w-full p-8 rounded-md">
         <Text className="text-1xl font-bold text-center">
           Welcome to login page
         </Text>
@@ -48,13 +40,13 @@ const Login = () => {
           If you don't have account?
           <Text
             className="text-blue-600"
-            onPress={() => navigation.navigate("Home")}
+            onPress={() => navigation.navigate("Signup")}
           >
             signup
           </Text>
         </Text>
       </View>
-    </SafeAreaWrapper>
+    </View>
   );
 };
 

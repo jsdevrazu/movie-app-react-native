@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFormikContext } from "formik";
-import AppErrorMessage from "../AppErrorMessage";
+import AppErrorMessage from "../AppErrorMessage/AppErrorMessage";
 import { TextInput, TouchableOpacity, View } from "react-native";
 import { EyeIcon, EyeOffIcon } from "react-native-heroicons/outline";
 
